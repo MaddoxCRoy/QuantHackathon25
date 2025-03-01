@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Load CSV file with correct handling of headers
-file_path = "Quantathon_Data_2025csv.csv"
+file_path = "Data/Quantathon_Data_2025csv.csv"
 df = pd.read_csv(file_path, skiprows=1)  # Skip the first row if needed
 
 # Rename columns for clarity

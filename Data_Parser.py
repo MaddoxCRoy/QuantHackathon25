@@ -25,5 +25,5 @@ prob_data = df[["Date_Prob", "PrDec", "PrInc"]].dropna()
 
 
 sp500_data.to_csv("SP500.csv", index=False)
-prob_data.to_csv("BondsData.csv", index=False)
+prob_data.to_csv("Prob_Data.csv", index=False)
 

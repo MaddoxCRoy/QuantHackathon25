@@ -23,6 +23,9 @@ df["Date_Prob"] = pd.to_datetime(df["Date_Prob"], format="%m/%d/%Y", errors="coe
 sp500_data = df[["Date_S&P500", "S&P500", "Bond_Rate"]].dropna()
 prob_data = df[["Date_Prob", "PrDec", "PrInc"]].dropna()
 
+sp500_data.columns = ["Date", "S&P500", "Bond_Rate"]
+prob_data.columns = ["Date", "PrDec", "PrInc"]
+
 
 sp500_data.to_csv("SP500.csv", index=False)
 prob_data.to_csv("Prob_Data.csv", index=False)

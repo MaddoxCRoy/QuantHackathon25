@@ -52,7 +52,7 @@ This project is designed to analyze **market regimes, predict market states (Bul
 - `RandomForest.py` - Trains a Random Forest model to classify market states.
 
 ## 🔹 Question 3: Trading Strategy Using Kelly Criterion
-- `KellyCriterionBackTest.py` - Backtests Kelly Criterion-based trading strategy.
+- `KellyCriterionBackTest.py` - Backtests Kelly Criterion-based trading strategy. Unused in final strategy, used to explore different trading possibilities
 - `our_strategy.py` - Executes trading decisions based on predictions.
 
 ## 🔹 Additional Files

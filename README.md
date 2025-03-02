@@ -14,16 +14,16 @@ This project is designed to analyze **market regimes, predict market states (Bul
 
 ## 🛠️ Installation & Setup
 
- - **Clone the Repository**
- - ```sh
- - git clone https://github.com/your-username/QuantHackathon25.git
- - cd QuantHackathon25
+- **Clone the Repository**
+- ```sh
+- git clone https://github.com/your-username/QuantHackathon25.git
+- cd QuantHackathon25
 
 ---
 
-## Project Structure
+# 📂 Project Structure
 
-# Data Files (`/Data`)
+## 🔹 Data Files (`/Data`)
 - `market_predictions.csv` - Machine Learning-based market state predictions.
 - `MergedData_with_predictions.csv` - Merged dataset with prrediction estimates.
 - `MergedData.csv` - Cleaned historical market data.
@@ -33,10 +33,10 @@ This project is designed to analyze **market regimes, predict market states (Bul
 - `SP2019-2022.csv` - S&P 500 data filtered for the trading period (2019-2022).
 - `trading_results_2019_2022.csv` - Backtest results from 2019-2022 trading strategy.
 
-# Question 1: Market Regime Analysis
+## 🔹 Question 1: Market Regime Analysis
 - `regimes_visualized.py` - Visualizes different market regimes using historical data.
 
-# Question 2: Machine Learning for Market Prediction
+## 🔹 Question 2: Machine Learning for Market Prediction
 - Part 1:
   Accuracy of Calculated Probabilities using 2% Threshold:
 
@@ -55,15 +55,15 @@ This project is designed to analyze **market regimes, predict market states (Bul
 - `MarketPredictionPlot.py` - Visualizes machine learning-based market predictions.
 - `RandomForest.py` - Trains a Random Forest model to classify market states.
 
-# Question 3: Trading Strategy Using Kelly Criterion
+## 🔹 Question 3: Trading Strategy Using Kelly Criterion
 - `KellyCriterionBackTest.py` - Backtests Kelly Criterion-based trading strategy.
 - `our_strategy.py` - Executes trading decisions based on predictions.
 
-# Additional Files
+## 🔹 Additional Files
 - `README.md` - Project documentation.
 
-## Contributers
- -Jack Huynh
+# Contributers
+ -Jack Huynh 
  -Maddox Roy
  -Charles Tirendi
  -Ryan Jackman

@@ -13,44 +13,60 @@ end_date = "2022-12-31"
 initial_capital = 10000  # Starting amount
 capital = initial_capital
 risk_per_trade = 0.02  # Risk 2% of capital per trade
-win_rate = 0.55  # Assumed probability of winning
 reward_risk_ratio = 2  # Expected reward-to-risk ratio
-
-# Calculate Kelly Criterion fraction
-p = win_rate
-q = 1 - win_rate
-kelly_fraction = (p - q) / reward_risk_ratio  # Kelly Criterion formula
 
 # Filter the dataset for trading period
 trading_data = df[(df["Date"] >= start_date) & (df["Date"] <= end_date)].copy()
 
-# Trading logic based on predicted market states
-positions = []  # Store trades
+# Store trade outcomes
+positions = []  
+win_count = 0  
+total_trades = 0  
 
 for i in range(1, len(trading_data)):
     predicted_market = trading_data.iloc[i]["Predicted_Market"]
     prev_price = trading_data.iloc[i-1]["S&P500"]
     current_price = trading_data.iloc[i]["S&P500"]
-    
-    # Calculate position size using Kelly Criterion
-    position_size = capital * kelly_fraction
-    
-    # Trading rules based on market state
+
+    # Skip trades if there's no price movement
+    if prev_price == current_price:
+        continue  
+
+    # Calculate position size using dynamic Kelly Criterion
+    if total_trades > 0:
+        win_rate = win_count / total_trades  # Dynamic win rate
+    else:
+        win_rate = 0.5  # Default 50% win rate for first trade
+
+    p = win_rate
+    q = 1 - win_rate
+    kelly_fraction = max((p - q) / reward_risk_ratio, 0)  # Ensure non-negative Kelly fraction
+    position_size = capital * kelly_fraction  
+
+    # Trading logic
     if predicted_market == "Bull":
         # Buy (Go Long)
         profit_loss = (current_price - prev_price) / prev_price
         capital += position_size * profit_loss
+        trade_outcome = profit_loss > 0
         positions.append(("Buy", trading_data.iloc[i]["Date"], current_price, capital))
 
     elif predicted_market == "Bear":
         # Sell (Go Short)
-        profit_loss = (prev_price - current_price) / prev_price  # Reverse profit calculation
+        profit_loss = (prev_price - current_price) / prev_price  
         capital += position_size * profit_loss
+        trade_outcome = profit_loss > 0
         positions.append(("Sell", trading_data.iloc[i]["Date"], current_price, capital))
 
-    elif predicted_market == "Static":
-        # No trade
+    else:
+        # Hold (No trade)
         positions.append(("Hold", trading_data.iloc[i]["Date"], current_price, capital))
+        continue  
+
+    # Track win/loss count
+    total_trades += 1
+    if trade_outcome:
+        win_count += 1
 
 # Convert results into a DataFrame
 trades_df = pd.DataFrame(positions, columns=["Action", "Date", "Price", "Capital"])
@@ -58,12 +74,14 @@ trades_df = pd.DataFrame(positions, columns=["Action", "Date", "Price", "Capital
 # Save trade results to CSV
 trades_df.to_csv("Data/trading_results_2019_2022.csv", index=False)
 
-# Display final capital
+# Final calculated win rate
+final_win_rate = win_count / total_trades if total_trades > 0 else 0
+
+# Display final results
 print(f"Final Capital (2019-2022): ${capital:.2f}")
+print(f"Calculated Win Rate: {final_win_rate:.2%}")
 print("Trading results saved to 'Data/trading_results_2019_2022.csv'")
 
-import pandas as pd
-import numpy as np
 
 # Load trading results
 trades_df = pd.read_csv("Data/trading_results_2019_2022.csv")
@@ -91,4 +109,3 @@ print(f"Annualized Return: {annualized_return:.2%}")
 print(f"Annualized Volatility: {annualized_volatility:.2%}")
 print(f"Sharpe Ratio: {sharpe_ratio:.2f}")
 print(f"Maximum Drawdown: {max_drawdown:.2%}")
-

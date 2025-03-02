@@ -1,6 +1,6 @@
 # QUANTHACKATHON25
 
-This project is designed to analyze **market regimes, predict market states (Bull, Bear, Static), and implement a Kelly Criterion-based trading strategy**. The project is divided into **three questions**, each addressing a different aspect of market analysis.
+This project is designed to analyze **market regimes, predict market states (Bull, Bear, Static)**. The project is divided into **three questions**, each addressing a different aspect of market analysis.
 
 ---
 

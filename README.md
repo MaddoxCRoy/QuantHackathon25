@@ -7,7 +7,7 @@ This project is designed to analyze **market regimes, predict market states (Bul
 ## 🚀 Features
 - **Market Regime Visualization** (Question 1)
 - **Machine Learning for Market Prediction** (Question 2) 
-- **Kelly Criterion-Based Trading Strategy** (Question 3) 
+- **Market-Regime + Indicators Trading Strategy** (Question 3) 
 - **Portfolio Performance Analysis** (Win Rate, Sharpe Ratio, Drawdowns)
 
 ---

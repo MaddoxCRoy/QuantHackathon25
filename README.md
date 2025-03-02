@@ -38,19 +38,19 @@ This project is designed to analyze **market regimes, predict market states (Bul
 
 ## 🔹 Question 2: Machine Learning for Market Prediction
 - Part 1:
-  Accuracy of Calculated Probabilities using 2% Threshold:
-
-  Classification
-  False Static      448
-  False Positive    112
-  True Positive      56
-  True Static        41
-  False Negative     23
-  True Negative       1
-  Name: count, dtype: int64
-
-  Overall classification accuracy: 14.39%
-
+  Accuracy of Calculated Probabilities using 2% Threshold:  
+  
+  Classification  
+  False Static      448  
+  False Positive    112  
+  True Positive      56  
+  True Static        41  
+  False Negative     23  
+  True Negative       1  
+  Name: count, dtype: int64  
+  
+  Overall classification accuracy: 14.39%  
+  
 - `Data_Parser.py` - Parses and cleans raw market data.
 - `MarketPredictionPlot.py` - Visualizes machine learning-based market predictions.
 - `RandomForest.py` - Trains a Random Forest model to classify market states.

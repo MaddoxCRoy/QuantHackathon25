@@ -109,4 +109,3 @@ print(f"Annualized Return: {annualized_return:.2%}")
 print(f"Annualized Volatility: {annualized_volatility:.2%}")
 print(f"Sharpe Ratio: {sharpe_ratio:.2f}")
 print(f"Maximum Drawdown: {max_drawdown:.2%}")
-

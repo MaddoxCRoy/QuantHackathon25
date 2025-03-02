@@ -63,8 +63,8 @@ This project is designed to analyze **market regimes, predict market states (Bul
 - `README.md` - Project documentation.
 
 # Contributers
- -Jack Huynh 
- -Maddox Roy
- -Charles Tirendi
- -Ryan Jackman
- -Pranshu Shrivastava
+- Jack Huynh
+- Maddox Roy
+- Charles Tirendi
+- Ryan Jackman
+- Pranshu Shrivastava

@@ -62,6 +62,8 @@ This project is designed to analyze **market regimes, predict market states (Bul
 ## 🔹 Additional Files
 - `README.md` - Project documentation.
 
+---
+
 # Contributers
 - Jack Huynh
 - Maddox Roy

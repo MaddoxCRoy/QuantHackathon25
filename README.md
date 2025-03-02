@@ -1,6 +1,7 @@
 # QUANTHACKATHON25
 
 This project is designed to analyze **market regimes, predict market states (Bull, Bear, Static)**. The project is divided into **three questions**, each addressing a different aspect of market analysis.
+The link to our verbal presentation is here: https://youtu.be/4dQUfS9YN8w?si=cqZeZpoRaxyp-lDf
 
 ---
 
@@ -61,7 +62,7 @@ This project is designed to analyze **market regimes, predict market states (Bul
 ---
 
 # Contributers
-- Jack Huynh
+- Jakcrus (Jack) Huynh
 - Maddox Roy
 - Charles Tirendi
 - Ryan Jackman

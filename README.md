@@ -42,6 +42,7 @@ This project is designed to analyze **market regimes, predict market states (Bul
   
   Classification  
   Correct Prediction: 203
+  
   Incorrect Prediction: 681
   
   Overall classification accuracy: 29.8%  

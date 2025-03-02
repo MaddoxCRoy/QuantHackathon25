@@ -6,10 +6,10 @@ from sklearn.linear_model import LogisticRegression
 
 # 1) Load Base Market Data and Market Predictions
 
-df_base = pd.read_csv("MergedData.csv", parse_dates=["Date"])
+df_base = pd.read_csv("Data/MergedData.csv", parse_dates=["Date"])
 df_base = df_base.sort_values("Date")
 
-df_pred = pd.read_csv("market_predictions.csv", parse_dates=["Date"])
+df_pred = pd.read_csv("Data/market_predictions.csv", parse_dates=["Date"])
 df_pred = df_pred.sort_values("Date")
 
 
@@ -19,7 +19,7 @@ df_merged = pd.merge(df_base,
                      df_pred[["Date", "Predicted_Market_Encoded"]], 
                      on="Date", 
                      how="left")
-df_merged.to_csv("MergedData_with_predictions.csv", index=False)
+df_merged.to_csv("Data/MergedData_with_predictions.csv", index=False)
 
 
 # 3) Filter for Entire Period: 2008-01-01 to 2024-12-31

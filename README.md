@@ -37,7 +37,7 @@ This project is designed to analyze **market regimes, predict market states (Bul
 - `regimes_visualized.py` - Visualizes different market regimes using historical data.
 
 ## 🔹 Question 2: Machine Learning for Market Prediction
-- Part 1:
+- Part 1:  
   Accuracy of Calculated Probabilities using 2% Threshold:  
   
   Classification  

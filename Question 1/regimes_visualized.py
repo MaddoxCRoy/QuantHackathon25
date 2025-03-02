@@ -4,7 +4,7 @@ import seaborn as sns
 import matplotlib.patches as mpatches
 
 # Step 1: Load the Data
-df = pd.read_csv('/Users/pranshushrivastava/Downloads/modMerged.csv')  # Replace with your file path
+df = pd.read_csv('Data/market_predictions.csv')
 df['Date'] = pd.to_datetime(df['Date'])
 df = df.sort_values(by='Date')  # Ensure data is sorted by date
 

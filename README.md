@@ -65,6 +65,6 @@ The link to our verbal presentation is here: https://youtu.be/4dQUfS9YN8w?si=cqZ
 # Contributers
 - Jakcrus (Jack) Huynh
 - Maddox Roy
-- Charles Tirend
+- Charles Tirendi
 - Ryan Jackman
 - Pranshu Shrivastava
